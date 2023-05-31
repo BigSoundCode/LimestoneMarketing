@@ -60,3 +60,24 @@ $(document).ready(function() {
     }
   });
 });
+
+
+var prevScrollPos = window.pageYOffset;
+var header = document.querySelector('.subHeader');
+
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    // Scrolling up
+    header.classList.remove('hidden');
+  } else {
+    // Scrolling down
+    header.classList.add('hidden');
+  }
+  prevScrollPos = currentScrollPos;
+});
+
+window.addEventListener('resize', function() {
+  // Recalculate scroll position on window resize
+  prevScrollPos = window.pageYOffset;
+});
