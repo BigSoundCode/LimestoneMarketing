@@ -266,6 +266,12 @@ header {
     max-width: 630px;
     align-items: center;
   }
+
+  @media screen and (min-width: 200px) {
+    .aboutText {
+      max-width: none;
+    }
+  }
   
 
   @media screen and (max-width: 768px) {
@@ -302,6 +308,7 @@ header {
     margin-left: 32px;
     margin-right: 32px;
     max-width: 100vw;
+    margin-bottom: 100px;
   }
 
   .gridImg {
@@ -309,6 +316,8 @@ header {
     flex-direction: column;
     align-items:center;
     position: relative;
+    max-width: 420px;
+    max-height: 420px;
 
 
   }
@@ -344,6 +353,18 @@ header {
   text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+  .photoGrid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+  }
+
+  .gridImg {
+    max-width: 100%;
+  }
+}
+
 /*CONTACT*/
 
 .contactContainer {
@@ -358,4 +379,14 @@ header {
   width: 300px;
   height: 600px;
   object-fit: cover;
+}
+
+.contactText {
+  max-width: 600px;
+  margin-right: 15%;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
 }
