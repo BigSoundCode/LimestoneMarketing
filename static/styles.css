@@ -390,3 +390,24 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+/*Our Work*/
+
+.testimonials {
+  width: 100%;
+  height: 600px;
+  /*background-image: url('../Images/Drone.jpg');
+  background-color: #c4a02d17; */
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.788),rgba(231, 178, 2, 0.795)), url('../Images/Drone.jpg');
+  text-align: center;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.testText {
+  max-width: 33%;
+  text-align: center;
+  font-weight: 400;
+}
