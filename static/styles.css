@@ -4,7 +4,7 @@
 footer {
   width: 100%;
   height: fit-content;
-  background-color: black;
+  background-image: url("../Images/Black\ Minimal\ Motivation\ Quote\ LinkedIn\ Banner\ \(1\)\(1\).png");
   color: white;
   text-align: center;
   position: relative;
@@ -12,6 +12,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: cover;
 }
 
 .footer-link a {
@@ -33,21 +34,15 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
   gap: 1rem;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 5px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 100px;
 }
 
-.footer-grid div:not(:last-child) {
-  border-right: 1px solid #ccc;
-  padding-right: 20px;
-}
 
 @media screen and (max-width: 759px) {
   footer {
@@ -572,7 +567,8 @@ header {
   height: 600px;
   /*background-image: url('../Images/Drone.jpg');
   background-color: #c4a02d17; */
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.788),rgb(231, 178, 2)), url('../Images/Joist.jpg');
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.788),rgba(59, 58, 53, 0.664)), url('../Images/Chipper.jpg');
+  background-position: 25%;
   text-align: center;
   align-items: center;
   color: white;
