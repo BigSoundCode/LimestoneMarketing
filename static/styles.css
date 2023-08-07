@@ -1,13 +1,81 @@
 
 /*General*/
 
-.footer {
-  height: 366px;
-  background-color: #000000;
+footer {
+  width: 100%;
+  height: fit-content;
+  background-color: black;
   color: white;
+  text-align: center;
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
+
+.footer-link a {
+  text-decoration-color: rgb(255, 255, 255);
+  color: white;
+}
+
+@media screen and (max-width: 980px){
+  p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+  
+}
+
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  display: grid;
+  grid-gap: 20px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.footer-grid div:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 759px) {
+  footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: max-content;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .photo-grid-container {
+    margin-left: 3%;
+    margin-right: 3%;
+    max-width: 94% !important;
+  }
+
+  .footer-grid div:not(:last-child) {
+    border-right: none;
+  }
+
+}
+
+
+
 
 body {
 font-family: "Raleway";
@@ -39,6 +107,18 @@ max-width: 100vw;
 .subHeader.hidden {
   opacity: 0;
 
+}
+
+@media screen and (max-width: 900px) {
+  .subHeader {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .companyTitle {
+    position: relative;
+  }
 }
 
 /*Navigation Bar*/
@@ -182,7 +262,7 @@ header {
   }
   
   .menu ul {
-    margin-right: 154px;
+    margin-right: 8.3%;
     font-size: 32px;
     position: relative;
     margin-top: 154px;
@@ -258,6 +338,18 @@ header {
     text-align: justify;
     align-items: start;
     justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 1506px) {
+    .aboutItem {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 36px !important;
+    }
+  
   }
 
   .aboutPhoto {
@@ -284,6 +376,7 @@ header {
       margin-left: 100px;
       margin-right: none;
     }
+    
   
 
   }
@@ -299,6 +392,12 @@ header {
     }
     .aboutItem {
       flex-direction: column;
+    }
+
+    .aboutPhoto {
+      width: 100%;
+      margin-left: 3%;
+      margin-right: 3%;
     }
   
 
@@ -395,6 +494,14 @@ header {
   }
 }
 
+/*TEAM*/
+
+
+#nathanael {
+  visibility:hidden;
+  height: 0;
+}
+
 /*CONTACT*/
 
 .contactContainer {
@@ -404,10 +511,30 @@ header {
   margin-right: 32px;
 }
 
+@media screen and (max-width: 982px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactText {
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+
+  .contactImg {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 .contactImg {
 
-  width: 567px;
-  height: 379px;
+  display: flex;
+  max-width: 567px;
+  max-height: 379px;
+  width: auto;
+  height: auto;
   object-fit: cover;
   margin-left: -32px;
 }
@@ -418,10 +545,11 @@ header {
 }
 
 .contactText {
-  max-width: 600px;
-  margin-right: 15%;
+  width: 100%;
+  margin-right: 7%;
   margin-left: 7%;
 }
+
 
 .socialIcons {
   display: flex;
@@ -444,7 +572,7 @@ header {
   height: 600px;
   /*background-image: url('../Images/Drone.jpg');
   background-color: #c4a02d17; */
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.788),rgba(231, 178, 2, 0.795)), url('../Images/Joist.jpg');
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.788),rgb(231, 178, 2)), url('../Images/Joist.jpg');
   text-align: center;
   align-items: center;
   color: white;
@@ -455,6 +583,7 @@ header {
 .testText {
   max-width: 33%;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
+  text-align: justify;
 }
 
