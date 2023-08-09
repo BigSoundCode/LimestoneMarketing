@@ -492,7 +492,7 @@ header {
     opacity: 0.8;
   }
 
-  .gridImg .active .overlay {
+  .gridImg.active .overlay {
     opacity: 0.8;
   }
 

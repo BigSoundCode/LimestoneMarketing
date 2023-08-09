@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 var prevScrollPos = window.pageYOffset;
 var header = document.querySelector('.subHeader');
-var scrollThreshold = 200;
+var scrollThreshold = 50;
 
 window.addEventListener('scroll', function() {
   var currentScrollPos = window.pageYOffset;
