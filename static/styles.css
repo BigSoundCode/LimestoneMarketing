@@ -447,6 +447,12 @@ header {
       max-width: 400px;
     }
 
+    @media screen and (max-width: 720px) {
+      .aboutPhoto {
+        max-width: 100%;
+      }
+    }
+
   }
 
 
