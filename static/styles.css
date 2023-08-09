@@ -94,7 +94,7 @@ max-width: 100vw;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 50;
+  z-index: 5;
   transition: opacity 0.3s ease-in-out;
 
 }
@@ -120,11 +120,16 @@ max-width: 100vw;
   }
 
   .hamburger {
-    top: 190px;
+    top: 50px;
   }
 
-  .logo img {
+  .logo img  {
     height: 150px !important;
+    margin-left: 0 !important;
+  }
+
+  .aTitle {
+    width: 150px !important;
   }
 
   header {
@@ -152,6 +157,7 @@ max-width: 100vw;
 
 .logo img {
   max-height: 200px;
+  margin-left: 32px;
 }
 
 header h1 {
@@ -204,16 +210,12 @@ header {
     flex-direction: row;
     height:300px;
     max-width: 100vw;
-    margin-left:3%;
     margin-right: 3%;
     align-items: center;
     justify-content: space-between;
 
 }
 
-.subHeader .logo {
-  margin-left: 32px;
-}
 
 
 
@@ -257,6 +259,8 @@ header {
     -o-transform: translateY(13px) rotate(45deg);
     transform: translateY(13px) rotate(45deg);
     background-color: white !important;
+    z-index: 1000;
+    opacity: 0;
   }
   
   #hamburger-1.is-active .line:nth-child(3){
@@ -265,6 +269,8 @@ header {
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
     background-color: white !important;
+    z-index: 1000;
+    opacity: 0;
   
   }
   
@@ -548,6 +554,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 3%;
+    margin-right: 3%;
     align-items: center;
   }
 
@@ -685,6 +692,7 @@ header {
       display: flex;
       flex-direction: column;
       margin-left: 3%;
+      margin-right: 3%;
     }
   
   

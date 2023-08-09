@@ -81,3 +81,4 @@ window.addEventListener('resize', function() {
   // Recalculate scroll position on window resize
   prevScrollPos = window.pageYOffset;
 });
+
