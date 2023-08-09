@@ -64,16 +64,19 @@ $(document).ready(function() {
 
 var prevScrollPos = window.pageYOffset;
 var header = document.querySelector('.subHeader');
+var scrollThreshold = 200;
 
 window.addEventListener('scroll', function() {
   var currentScrollPos = window.pageYOffset;
+
   if (prevScrollPos > currentScrollPos) {
     // Scrolling up
     header.classList.remove('hidden');
-  } else {
-    // Scrolling down
+  } else if (currentScrollPos > scrollThreshold) {
+    // Scrolling down and passed the scrollThreshold
     header.classList.add('hidden');
   }
+
   prevScrollPos = currentScrollPos;
 });
 
@@ -81,4 +84,3 @@ window.addEventListener('resize', function() {
   // Recalculate scroll position on window resize
   prevScrollPos = window.pageYOffset;
 });
-
