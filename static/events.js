@@ -84,3 +84,20 @@ window.addEventListener('resize', function() {
   // Recalculate scroll position on window resize
   prevScrollPos = window.pageYOffset;
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var image = document.querySelectorAll('.gridImg');
+
+  gridImg.addEventListener('touchstart', function() {
+    gridImg.classList.add('active');
+  });
+
+  gridImg.addEventListener('touchmove', function() {
+    gridImg.classList.remove('active');
+  });
+
+  gridImg.addEventListener('touchend', function() {
+    gridImg.classList.remove('active');
+  });
+});
