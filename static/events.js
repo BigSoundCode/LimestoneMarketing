@@ -17,7 +17,7 @@ $(document).ready(function() {
     var windowHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var images = $('.homeStripImg');
-    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image7', 'image8', 'image9'];
+    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9'];
 
     var overlappingImageID = null; // Track the ID of the image being overlapped
 
@@ -60,6 +60,59 @@ $(document).ready(function() {
     }
   });
 });
+
+
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var windowHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+    var images = $('.homeStripImg');
+    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9'];
+
+    var overlappingImageID = null; // Track the ID of the image being overlapped
+
+    // Check if the menuBig is overlapping with any image
+    $('.menuBigindex a').each(function() {
+      var linkTop = $(this).offset().top;
+      var linkHeight = $(this).outerHeight();
+      var linkBottom = linkTop + linkHeight;
+
+      images.each(function() {
+        var imageTop = $(this).offset().top;
+        var imageBottom = imageTop + $(this).outerHeight();
+        var imageID = $(this).attr('id');
+
+        if (linkBottom >= imageTop && linkTop <= imageBottom) {
+          overlappingImageID = imageID;
+          return false; // Exit the loop if an overlap is found
+        }
+      });
+
+      // Exit the loop if an overlap is found
+      if (overlappingImageID) {
+        return false;
+      }
+    });
+
+    // Remove both .light and .dark classes from the menuBig links
+    $('.menuBigindex a').removeClass('light dark');
+
+    // Apply the appropriate class if there's an overlap
+    if (overlappingImageIDs.includes(overlappingImageID)) {
+      $('.menuBigindex a').addClass('dark');
+    } else {
+      $('.menuBigindex a').addClass('light');
+    }
+
+    // If no overlap and at the top, remove both classes
+    if (scrollTop === 0) {
+      $('.menuBigindex a').removeClass('light dark');
+    }
+  });
+});
+
+
+
 
 
 var prevScrollPos = window.pageYOffset;

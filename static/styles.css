@@ -138,15 +138,78 @@ top: 1003;
 top: -100px;
 }
 
+.trapezoid2 {
+	border-bottom: 200px solid #c7a45375;
+border-left: 50px solid transparent;
+height: 100%;
+width: 25%;
+position: relative;
+right: -10px;
+top: 1003;
+top: -100px;
+}
+
+
 .motto {
   z-index: 2000;
   color:#847782;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1531px) { 
+
+  .trapezoid {
+    width: 20%;
+
+  }
+
+  .trapezoid2 {
+    width: 20%;
+
+  }
+
+  .tagline {
+    right: 10px;
+    top: 300px;
+  }
+
+  .menuBig a {
+    padding: 10px !important;
+  }
+
+  .menuBigindex a {
+    padding: 10px !important;
+  }
+
+}
+
+@media screen and (max-width: 1248px) {
+  .menuBig {
+    left: 30%
+  }
+
+  .contactHeader {
+    left: 34%;
+  }
+}
+
+@media screen and (max-width: 1218px) {
+  .menuBig {
+    left: 27% !important;
+  }
+}
+  @media screen and (max-width: 1122px) {
+    .contactHeader {
+      left: 30% !important;
+    }
+
+ 
+}
+
+
+
+@media screen and (max-width: 1010px) {
   .subHeader {
     flex-direction: column;
-    flex-wrap: wrap;
     text-align: center;
     height: 220px !important;
   }
@@ -160,6 +223,7 @@ top: -100px;
 
   .hamburger {
     top: 140px;
+    visibility: visible !important;
   }
 
   header {
@@ -191,6 +255,34 @@ top: -100px;
 
   .workVid {
     max-width: 94%;
+  }
+
+  .menuBig {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .menuBigindex {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .contactHeader {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  .trapezoid {
+    visibility: hidden;
+    width: 0px !important;
+    height: 0px !important;
+  }
+
+  .trapezoid2 {
+    visibility: hidden;
+    width: 0px !important;
+    height: 0px !important; 
   }
 }
 
@@ -224,11 +316,11 @@ header h1 {
 
 
 .dark {
-  color: white;
+  color: white !important;
 }
 
 .light {
-  color: black;
+  color: black !important;
 }
 
 #image1 h1.companyTitle {
@@ -269,6 +361,18 @@ header {
 
 }
 
+.menuBigindex {
+  color: black;
+  position: fixed;
+  z-index: 1001;
+  top: 175px;
+  left: 34%;
+
+
+}
+
+
+
 .conHtext {
   padding: 20px;
 }
@@ -279,6 +383,14 @@ header {
   padding: 20px;
   color: #847782;
 }
+
+.menuBigindex a {
+  text-decoration: none;
+  text-decoration-color: #000000;
+  padding: 20px;
+  color: #847782;
+}
+
 
 
 
@@ -415,8 +527,8 @@ header {
 
   .aboutContainer {
     justify-content: space-between;
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 32px;
     
   }
@@ -474,11 +586,10 @@ header {
   @media screen and (min-width: 1000px) {
     .aboutText {
       max-width: none;
-      margin-right: 100px;
-      margin: 20px;
+      margin-right: 3%;
     }
     .aboutItem:nth-child(even) .aboutText {
-      margin-left: 100px;
+      margin-left: 3%;
       margin-right: none;
     }
     
@@ -497,11 +608,18 @@ header {
     }
     .aboutItem {
       flex-direction: column;
+      align-items: start;
+      width: 100%;
     }
 
     .aboutPhoto {
       width: 100%;
       max-width: 100%;
+    }
+
+    .aboutText {
+      width: 100% !important;
+      max-width: none;
     }
   
 
@@ -511,6 +629,7 @@ header {
 
     .aboutPhoto {
       max-width: 500px;
+      max-height: 100vh;
     }
 
   }
@@ -519,6 +638,7 @@ header {
 
     .aboutPhoto {
       max-width: 400px;
+      max-height: 100vh;
     }
 
     @media screen and (max-width: 768px) {
@@ -536,10 +656,8 @@ header {
 
   .photoGrid {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-gap: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.1%;
     max-width: 100vw;
     margin-bottom: 100px;
   }
@@ -554,6 +672,14 @@ header {
     margin-bottom: 100px;
   }
 
+  @media screen and (max-width: 900px) {
+    .photoGrid2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
 
   .gridImg {
     display: flex;
@@ -564,6 +690,8 @@ header {
     max-height: 100%;
     object-fit: cover;
     width: 100%;
+    overflow: hidden;
+    
 
 
   }
@@ -612,28 +740,27 @@ width: 100%;
     }
   
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    text-align: center;
-    
-  }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
   
-.text {
-  text-align: center;
-  font-size: 24px;
-  top: 25%;
-  position: relative;
-}
+  .text {
+    text-align: center;
+    font-size: 24px;
+    max-width: 80%;
+    margin: 0 auto; /* Center the text within the overlay */
+  }
 
 @media screen and (max-width: 1661px) {
 
@@ -663,7 +790,7 @@ width: 100%;
   }
 
   #jwb {
-    width: 330px;
+    width: 100%;
   }
 }
 
