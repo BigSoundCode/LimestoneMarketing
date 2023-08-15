@@ -98,6 +98,7 @@ max-width: 100vw;
   top: 0;
   z-index: 5;
   transition: opacity 0.3s ease-in-out;
+  border-bottom: solid #c7a453b4;
 
 }
 
@@ -128,7 +129,7 @@ max-width: 100vw;
 }
 
 .trapezoid {
-	border-bottom: 200px solid #c7a45375;
+	border-bottom: 200px solid #c7a453b4;
 border-left: 50px solid transparent;
 height: 100%;
 width: 25%;
@@ -139,7 +140,7 @@ top: -100px;
 }
 
 .trapezoid2 {
-	border-bottom: 200px solid #c7a45375;
+	border-bottom: 200px solid #c7a453b4;
 border-left: 50px solid transparent;
 height: 100%;
 width: 25%;
@@ -222,8 +223,10 @@ top: -100px;
   }
 
   .hamburger {
-    top: 140px;
+    top: 170px;
     visibility: visible !important;
+    right: unset !important;
+    margin-right: 0 !important;
   }
 
   header {
@@ -231,7 +234,7 @@ top: -100px;
   }
 
   .logo img  {
-    height: 100px !important;
+    height: 150px !important;
     margin-left: 0 !important;
     top: 10px;
     position: relative;
@@ -283,6 +286,10 @@ top: -100px;
     visibility: hidden;
     width: 0px !important;
     height: 0px !important; 
+  }
+
+  .companyTitle {
+    visibility: hidden;
   }
 }
 
@@ -663,12 +670,12 @@ header {
 
   .photoGrid2 {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 75px;
-    margin-left: 3px;
-    margin-right: 3px;
     max-width: 100vw;
     margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   @media screen and (max-width: 900px) {
@@ -711,11 +718,11 @@ header {
 
 
   .gridImg:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .gridImg .active .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .imageHover {
@@ -930,3 +937,14 @@ width: 100%;
   
 }
 
+.slide-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  z-index: 1;
+}
+
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}

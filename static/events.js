@@ -17,7 +17,7 @@ $(document).ready(function() {
     var windowHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var images = $('.homeStripImg');
-    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9'];
+    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9', 'image11', 'image12', 'image13', 'image14'];
 
     var overlappingImageID = null; // Track the ID of the image being overlapped
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
     var windowHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var images = $('.homeStripImg');
-    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9'];
+    var overlappingImageIDs = ['image1', 'image2', 'image5', 'image6', 'image8', 'image9', 'image11', 'image12', 'image13', 'image14'];
 
     var overlappingImageID = null; // Track the ID of the image being overlapped
 
@@ -154,3 +154,18 @@ document.addEventListener('DOMContentLoaded', function() {
     gridImg.classList.remove('active');
   });
 });
+
+
+function handleScroll() {
+  const content = document.querySelectorAll('.slide-up');
+  const windowHeight = window.innerHeight;
+  content.forEach(item => {
+  const itemTop = item.getBoundingClientRect().top;
+  if (itemTop < windowHeight) {
+  item.classList.add('active');
+  console.log('This works!');
+  }
+  });
+  }
+  window.addEventListener('load', handleScroll);
+  window.addEventListener('scroll', handleScroll);
