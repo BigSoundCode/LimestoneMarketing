@@ -579,7 +579,6 @@ header {
   }
 
   .aboutText {
-    max-width: 400px;
     align-items: center;
   }
 
@@ -590,7 +589,7 @@ header {
     }
     .aboutItem:nth-child(even) .aboutText {
       margin-left: 3%;
-      margin-right: none;
+      margin-right: 0 !important;
     }
     
   
