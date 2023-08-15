@@ -140,21 +140,20 @@ window.addEventListener('resize', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var image = document.querySelectorAll('.gridImg');
+  var image = document.querySelector('.gridImg');
 
-  gridImg.addEventListener('touchstart', function() {
-    gridImg.classList.add('active');
+  image.addEventListener('touchstart', function() {
+    image.classList.add('active');
   });
 
-  gridImg.addEventListener('touchmove', function() {
-    gridImg.classList.remove('active');
+  image.addEventListener('touchmove', function() {
+    image.classList.remove('active');
   });
 
-  gridImg.addEventListener('touchend', function() {
-    gridImg.classList.remove('active');
+  image.addEventListener('touchend', function() {
+    image.classList.remove('active');
   });
 });
-
 
 function handleScroll() {
   const content = document.querySelectorAll('.slide-up');
